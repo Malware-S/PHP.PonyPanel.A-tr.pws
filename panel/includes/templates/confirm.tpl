@@ -12,16 +12,16 @@
 	{assign var='yes_code' value={$yes_code nofilter}|cat:"&amp;token={$token}"}
 {/if}
 
-		<h4 class="achtung_header">{$msg|default:"пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ?"}</h4>
+		<h4 class="achtung_header">{$msg|default:"Вы уверены?"}</h4>
 		<div style="height:40px;">
                 <div class="buttons">
 					<a href="{$yes_code|default:({$smarty.server.SCRIPT_NAME}|cat:"?token={$token}") nofilter}" class="positive" style="width:50px">
 					    <img src="includes/design/images/accept.png" alt="" />
-					    пїЅпїЅ
+					    Да
 					</a>
 					<a href="{$no_code|default:({$smarty.server.SCRIPT_NAME}|cat:"?token={$token}") nofilter}" class="negative" style="width:50px">
 					    <img src="includes/design/images/cross.png" alt="" /> 
-					    пїЅпїЅпїЅ
+					    Нет
 					</a>
 	    		</div>
 	    </div>
